@@ -1,0 +1,17 @@
+```html
+<div class="flex items-center justify-center h-screen">
+  <div class="bg-gray-200 p-4 rounded shadow">
+    <h1 class="text-3xl font-bold mb-4">Error: PurgeCSS not working</h1>
+    <p>Tailwind CSS is not applying styles.</p>
+  </div>
+</div>
+```
+
+```javascript
+// purgecss.config.js
+module.exports = {
+  content: ['./**/*.html'],
+  css: ['./**/*.css'],
+  defaultExtractor: content => content.match(/[^<>"\/,\[\]\u0000-\u0020]+/g) || []
+}
+```
